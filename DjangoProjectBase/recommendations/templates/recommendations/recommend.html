@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Recomendación de Películas</h1>
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+    <form method="post" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="prompt">Describe el tipo de película que buscas:</label>
+            <textarea class="form-control" id="prompt" name="prompt" rows="3" placeholder="Ejemplo: Película de la segunda guerra mundial"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Obtener Recomendación</button>
+    </form>
+</div>
+{% endblock %} 
