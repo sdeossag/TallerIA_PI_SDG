@@ -3,7 +3,6 @@ Pillow
 pandas
 matplotlib
 openai
-tensorflow
 numpy
 huggingface
 dotenv
